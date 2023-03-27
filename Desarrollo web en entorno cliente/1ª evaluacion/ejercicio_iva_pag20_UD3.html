@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function aplicar_IVA(valorProducto, IVA) {
+            var productoConIVA = valorProducto * IVA;
+            alert("El precio del producto, aplicando el IVA del " + IVA + " es: " + productoConIVA);
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+        var productosinIva = prompt("Ingresa el producto sin IVA:");
+        var IVA = prompt("Ingresa el IVA:"); 
+        aplicar_IVA(productosinIva, IVA);
+
+
+    </script>
+</body>
+
+</html>

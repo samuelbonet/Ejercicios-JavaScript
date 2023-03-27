@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--6.	Modifica el ejercicio anterior para que al pasar el ratón por el enlace aparezca el texto “Has pasado el ratón por el enlace” colocado a la derecha del enlace.Si se pulsa sobre el enlace se cambiarán las siguientes propiedades del texto adicional:color (#0101ff) y font-weight (bold).-->
+</head>
+<body>
+    <a href="#"id="id_link"title="Enlace de prueba">Pulsa aquí</a>
+    <script>
+        var link = document.getElementById("id_link");
+
+        link.onmouseover = function(){
+            var texto = document.createTextNode("Has pasado el ratón por el enlace");
+            link.parentNode.appendChild(texto);
+        }
+
+        link.onclick = function(){
+            link.parentNode.style.color = '#0101ff';
+            link.parentNode.style.fontWeight = 'bold';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Bonet">
+    <title>Ejercicio 2 3.1</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /* 2.	Crea una página Web con un vector de seis componentes {true, 5, false, "hola", "adios", 2}. Con el uso de operadores comprobar si: 
+          El cuarto componente es mayor o no que el tercero.
+          Realizar un OR entre el primer y tercer componente.
+          Realizar un AND entre el primer y tercer componente.
+          Sumar, restar, multiplicar, dividir y calcular el módulo entre el segundo y el sexto componente.
+   */
+
+        var componente = [true, 5, false, "hola", "adios", 2];//creo un vector de 6 componentes{true:[0],5:[1],false:[2],hola:[3],adios:[4],2:[6]}
+        var resultado = 0;//la variable resultado la inicializo
+        if (componente[3] > componente[2]) {//mayor o menor
+            document.write("El cuarto componente es mayor que el tercero" + "<br>");
+        } else {
+            document.write("El cuarto componente no es mayor que el tercero" + "<br>");
+        }
+        if (componente[0] || componente[2]) {//OR valor booleano
+            document.write("El primero y tercer componente son booleanos" + "<br>");
+        } else {
+            document.write("El primero y tercer componente no son booleanos" + "<br>");
+        }º
+        if (componente[0] && componente[2]) {//AND
+            document.write("El primero y tercer componente son verdaderos"  + "<br>");
+        } else {
+            document.write("El primero y tercer componente no son verdaderos"   + "<br>");
+        }
+        resultado = componente[1] + componente[5];// suma
+        document.write("La suma es: " + resultado + "<br>");
+        resultado = componente[1] - componente[5];//resta
+        document.write("La resta  es: " + resultado + "<br>");
+        resultado = componente[1] * componente[5];//multiplicacion
+        document.write("La multiplicación  es: " + resultado + "<br>");
+        resultado = componente[1] / componente[5];//division
+        document.write("La división es: " + resultado + "<br>");
+        resultado = componente[1] % componente[5];//modulo
+        document.write("El módulo es: " + resultado + "<br>");
+
+    </script>
+</body>
+
+</html>

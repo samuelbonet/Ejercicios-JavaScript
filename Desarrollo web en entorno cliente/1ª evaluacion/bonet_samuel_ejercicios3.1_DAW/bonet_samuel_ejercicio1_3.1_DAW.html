@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Bonet">
+    <title>Ejercicio 1 3.1</title>
+
+
+    <script type="text/javascript">
+        /* 1.Comprueba si una cadena de texto introducida por el usuario está formada sólo por mayúsculas, sólo por minúsculas o por ambas simultáneamente mediante una función.*/
+        
+        function comprobarMayusculasMinusculas() {//primero creo la función pasada anteriormente
+            var cadenaTexto = prompt("Introduce una cadena de texto");//pido el texto
+            var mayusculas = 0;//inicializo la variable a 0
+            var minusculas = 0;//inicializo la variable a 0
+            for (var i = 0; i < cadenaTexto.length; i++) {//compruebo la longitud de la cadena mediante un for
+                if (cadenaTexto.charAt(i) == cadenaTexto.charAt(i).toUpperCase()) {
+                    mayusculas++;
+                } else {
+                    minusculas++;
+                }
+            }
+            if (mayusculas == cadenaTexto.length) {//con el paso anterior mostrará el mensaje por pantalla
+                alert("La cadena está formada  por mayúsculas");
+            } else if (minusculas == cadenaTexto.length) {
+                alert("La cadena está formada por minúsculas");
+            } else {
+                alert("La cadena está formada por mayúsculas y minúsculas");
+            }
+        }
+        comprobarMayusculasMinusculas();
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

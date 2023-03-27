@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <script>
+        function moverVentana() {
+            mi_ventana.moveBy(5, 5);
+            i++;
+            if (i < 20)
+                setTimeout('moverVentana()', 100);
+            else
+                mi_ventana.close();
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        /*Abre una ventana de altura 150
+        píxeles y anchura 250 situada a 100 a la
+        derecha y 100 abajo respecto de la esquina
+        superior izquierda de la ventana principal.
+
+        Después, muévela a 400 a la derecha y 100
+        abajo respecto de la esquina superior izquierda.
+        */
+        var opciones = "left=100,top=100,width=250,height=150", i = 0;
+        mi_ventana = window.open("", "", opciones);
+        mi_ventana.document.write("Una prueba de ventanas");
+        mi_ventana.moveTo(400, 100);
+        moverVentana();
+        perimetro = parseInt(lado1) + parseInt(lado1) + parseInt(lado2) + parseInt(lado2);
+        document.write("El area del rectágulo es : " + area + "<br>");
+        document.write("<br> +typeof area");
+        document.write("<br> +typeof perimetro");
+        setTimeout('location.reload()', 5000);
+
+
+    </script>
+
+
+</body>
+
+</html>

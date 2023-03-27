@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+
+        <script>
+        function validarNombre(){
+            valor=document.getElementById("nombre").value;
+            if (valor==null| valor.length==0){
+                alert("no valido");
+                return false;
+            }
+            alert(" valido");
+                return true;
+        }
+                function validarTelefono(){
+                valor=document.getElementById("telefono").value;
+            if (isNaN(valor)){
+                alert("no valido");
+                return false;
+            }
+            alert(" valido");
+                return true;
+        }
+        function validarFecha(){
+            var dia=document.getElementById("dia").value;
+            var mes=document.getElementById("mes").value;
+            var anio=document.getElementById("anio").value;
+            fecha=new Date (anio,mes,dia);
+            if(isNaN(fecha)){
+                alert("no valido");
+                return false;
+            }
+            alert(" valido");
+                return true;
+        }
+                function validarCuadro(){
+                valor=document.getElementById("cuadro").value;
+            if (!cuadro.checked){
+                alert("no valido");
+                return false;
+            }
+            alert(" valido");
+                return true;
+        }
+
+    </script>
+    </head>
+    <body>
+        <form name="formulario" method="get">
+            <label>Nombre:</label><input type="text" name="nombre" id="nombre"
+                onchange="return validar()"><br>
+            <label>Telefono:</label><input type="text" name="telefono"
+                id="telefono" onchange="return validarNombre()"><br>
+            <label>Dia:</label><input type="text" name="dia" id="dia"
+                onchange="return validarTelefono()">
+            <label>Mes:</label><input type="text" name="mes" id="mes"
+                onchange="return validarFecha()">
+            <label>Año:</label><input type="text" name="anio" id="anio"
+                onchange="return validaFecha()"><br>
+            <label>Validación:</label><input type="checkbox" name="cuadro"
+                id="cuadro" onchange="return validarCuadro()">
+        </form>
+    </body>
+</html>

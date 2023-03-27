@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Bonet">
+    <title>Ejercicio 2 3.2</title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*2.	Dados dos números que introduciremos como datos en el código HTML, medianteuna función:
+        -	Comprueba si el primero es mayor que el segundo.
+        -	Comprueba si el segundo es positivo.
+        -	Comprueba si el primero es negativo o distinto de cero.
+        -	Comprueba si al sumar 1 al primero lo convertimos en mayor o igual que el segundo.*/
+        
+        function comprobarNumeros(){//funcion
+        var num1 = prompt("Introduce el primer número"); //introduce el primer numero
+        var num2 = prompt("Introduce el segundo número"); //introduce el primer numero
+        var num1 = parseInt(num1);//se parsea y devuelve un entero
+        var num2 = parseInt(num2);//se parsea y devuelve un entero
+        if (num1 > num2) {
+            document.write("El "+num1+" es mayor que el "+num2+" <br>");//num1 mayor que num2
+        } else {
+            document.write("El "+num1+" no es mayor que el "+num2+" <br> ");//num1 no mayor que num2
+        }
+        if (num2 > 0) {
+            document.write("El "+num2+" es positivo "+"<br> ");//positivo
+        } else {
+            document.write("El "+num2+" número no es positivo "  +"<br> ");//no positivo
+        }
+        if (num1 < 0 || num1 != 0) {
+            document.write("El "+num1+" es negativo o distinto de cero "+"<br> ");//negativo o distinto de 0
+        } else {
+            document.write("El "+num2+" no es negativo o distinto de cero "+"<br> ");//no negativo o distinto de 0
+        }
+        if (num1 + 1 >= num2) {
+            document.write("Al sumar 1 al "+num1+" lo convertimos en mayor o igual que el segundo "+"<br> ");   //mayor o igual que num2
+        } else {
+            document.write("Al sumar 1 al "+num1+" no lo convertimos en mayor o igual que el segundo "+"<br> ");    //no mayor o igual que num2
+        }
+    }
+        comprobarNumeros();
+
+
+
+
+
+    </script>
+</body>
+
+</html>

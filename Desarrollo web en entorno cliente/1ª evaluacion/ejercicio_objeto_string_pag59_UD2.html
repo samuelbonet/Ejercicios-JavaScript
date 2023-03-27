@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+
+<body>
+
+    <script>
+        /*Muestra en la pantalla varias frases,
+una en cursiva, otra en negrita, cambia el color
+de la fuente, su tamaño, etc. También visualiza
+la longitud de la cadena de caracteres.
+    */
+        var texto = new String("Hola mundo");
+        document.write("cursiva:" + texto.italics() + "<br>");
+        document.write("negrita:" + texto.bold() + "<br>");
+        document.write("color fuente:" + texto.fontcolor("red") + "<br>");
+        document.write("tamaño texto:" + texto.fontsize(20) + "<br>");
+        document.write("tachado:" + texto.strike() + "<br>");
+
+    </script>
+
+</body>
+
+</html>

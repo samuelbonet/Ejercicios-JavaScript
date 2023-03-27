@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+        function comprobarHumano() {
+        var resultado =prompt("Introduzca el resultado de 144/12");
+        var humano=Verficiacion(resultado);
+        if (humano==true){
+            document.write("Has ingresado el resultado correcto");
+
+        }else{
+            alert("No has introducido el resultado correcto");
+        }
+    }
+        function Verificacion(res){
+            var compruebaResultado;
+       if (res== 12){
+           compruebaResultado=true;
+         }else{
+           compruebaResultado=false;
+         }              
+        return compruebaResultado; 
+        }
+
+
+        
+    </script>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+        
+    comprobarHumano();
+
+
+    </script>
+</body>
+
+</html>

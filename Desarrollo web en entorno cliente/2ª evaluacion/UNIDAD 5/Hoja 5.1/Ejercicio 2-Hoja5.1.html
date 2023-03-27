@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JavaScript DOM sin manejadores semánticos</title>
+   <!--2.	Modifica el ejercicio anterior usando ahora manejadores de eventos semánticos.	-->
+</head>
+<body>
+    <a href="#"id="id_link"title="Enlace de prueba">Pulsa aquí</a>
+    <script>
+        document.getElementById("id_link").onclick = enlace;
+        
+        function enlace() {
+            alert("Segundo atributo del enlace:" +this.attributes[1].nodeName);
+            alert("Valor del atributo del enlace:" +this.attributes[1].nodeValue);            
+        }
+    </script>    
+</body>
+</html>

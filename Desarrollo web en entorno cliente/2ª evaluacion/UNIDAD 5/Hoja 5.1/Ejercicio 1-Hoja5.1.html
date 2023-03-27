@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JavaScript DOM sin manejadores semánticos</title>
+    <!--1.	Realiza una página Web con un enlace. Al pulsar sobre el enlace se debe mostrar el segundo atributo del enlace y su valor mediante dos ventanas de alerta.-->
+
+</head>
+<body>
+    <a href="#"id="id_link"title="Enlace de prueba" onclick="enlace(this)">Pulsa aquí</a>
+    <script>
+        function enlace(elemento){
+            alert("Segundo atributo del enlace:" +elemento.attributes[1].nodeName);
+            alert("Valor del atributo del enlace:" +elemento.attributes[1].nodeValue);
+            
+        }
+    </script>    
+</body>
+</html>

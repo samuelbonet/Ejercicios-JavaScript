@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <!--3.	Divide la pantalla en 4 zonas iguales con colores rojo, amarillo, azul y verde. Al pulsar sobre una de ellas, deberá aparecer un “alert” que indique el color del área sobre la que se ha hecho “click”.-->
+</head>
+<body>
+    <div id="rojo"  class="capa" style="width: 50%; height: 50%; background-color: red;"></div>
+    <div id="amarillo" class="capa" style="width: 50%; height: 50%; background-color: yellow;"></div>
+    <div id="azul" class="capa" style="width: 50%; height: 50%; background-color: blue;"></div>
+    <div id="verde" class="capa" style="width: 50%; height: 50%; background-color: green;"></div>
+   <script>
+        document.getElementsByClassName("capa").onclick = muestraMensaje();
+        document.getElementsByClassName("amarillo").onclick = muestraMensaje();
+        document.getElementsByClassName("azul").onclick = muestraMensaje();
+        document.getElementsByClassName("verde").onclick = muestraMensaje();
+
+        function muestraMensaje() {
+            alert(" Color: " + this.style.backgroundColor);
+        }
+    </script>
+</body>
+</html>

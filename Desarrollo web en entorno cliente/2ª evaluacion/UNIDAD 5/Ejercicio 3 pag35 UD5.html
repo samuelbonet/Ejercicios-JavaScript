@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Hola Mundo</div>
+    <script>
+
+
+    var div = document.createElement("div");
+       var texto = document.createTextNode("Otro Hola Mundo");
+       div.appendChild(texto);
+        document.body.appendChild(div);
+        alert ("nodo creado y añadido valor");
+       var nuevoDiv = document.createElement("div");
+       var nuevoTexto = document.createTextNode("Otro");
+       nuevoDiv.appendChild(nuevoTexto);
+
+       var originalDiv=document.getElementsByTagName("div")[0];
+       originalDiv.parentNode.replaceChild(nuevoDiv,originalDiv);
+        alert ("nodo anterior se ha modificado");
+
+
+    </script>
+</body>
+
+</html>

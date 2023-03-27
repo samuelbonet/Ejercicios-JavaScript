@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--7.	Modifica el ejercicio anterior para que se inserte el texto <h3>Enlace pulsado</h3> en una línea anterior al enlace, cuando el enlace sea pulsado una sola vez.-->
+</head>
+<body>
+
+    <a href="#"id="id_link"title="Enlace de prueba">Pulsa aquí</a>
+
+
+    <script>
+        var link = document.getElementById("id_link");
+    
+     
+        link.onclick = function(){
+            var h3 = document.createElement("h3");
+            var texto = document.createTextNode("Enlace pulsados");
+            h3.appendChild(texto);
+            link.parentNode.insertBefore (h3,link);
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function recargar(){
+            document.getElementById("caja").innerHTML="<p>Este es el nuevo contenido </p>";
+            alert ("Contenido del DIV" +document.getElementById("caja").innerHTML);
+
+        }
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <div id="caja">
+        <p>Esto es un div que se llama caja</p>
+
+    </div>
+    <input type="button" value="Pulsa aqui para cambiar el contenido" onclick="recargar();">
+    <script>
+        var contenidoDiv=document.getElementById("caja").innerHTML;
+        alert("Contenido del div" +contenidoDiv);
+    </script>
+</body>
+</html>

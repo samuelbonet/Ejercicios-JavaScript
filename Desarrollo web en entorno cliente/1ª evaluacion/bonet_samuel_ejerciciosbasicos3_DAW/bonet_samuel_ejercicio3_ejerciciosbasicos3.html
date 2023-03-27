@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta name="author" content="Samuel Bonet">
+
+</head>
+
+<body>
+
+  <script type="text/javascript">
+
+    /*3.	Crea una página Web que indique si el Documento Nacional de Identidadintroducido por un usuario es correcto o no mediante un mensaje en una ventana emergente.
+    El cálculo de la letra del DNI es un proceso matemático sencillo que se basa en obtener el resto de la división entera del número de DNI y el número 23. A partir del resto de la división, se obtiene la letra seleccionándola dentro de un string de letras.
+    El string de letras es: 'TRWAGMYFPDXBNJZSQVHLCKET'.
+    Por tanto, si el resto de la división es 0, la letra del DNI es la T o si el resto es 3, la letra es la A.
+    Puedes ayudarte del objetoString.*/
+
+
+    var dniCompleto = prompt("Introduce el número del dni (con letra incluida)"); // Se pide el numero con la letra
+    var dniLetras = "TRWAGMYFPDXBNJZSQVHLCKET"; //Guardo el string de letras que hay en el enunciado del ejercicio
+    var dniNumero = dniCompleto.substring(0, 8) // Uso la posicion del dni introducido para saber los numeros
+    var dniLetra = dniCompleto.substring(8, 9) // Uso la posicion del dni introducido para saber la letra
+    var dniResto = dniNumero % 23 // Obtengo el resto de la division entera del numero del dni y el 23 proveniente del string de letras
+    var letra = dniLetras.charAt(dniResto) // Obtengo la letra del resto de la division
+
+
+    while (true) { //Bucle infinito para que el usuario introduzca el DNI hasta que sea correcto
+      if (dniCompleto.length != 9) { //La longitud no corresponde en caso de que llegue a 9 numeros
+        alert("El DNI  no es correcto")
+      }
+      else {
+        break // Cuando salga será correcto
+      }
+    }
+
+    dniCompleto = dniCompleto.toUpperCase() // Transformacion a mayuscula en caso de que ponga minuscula
+
+    if (letra == dniLetra) { // si cumple esta condicion será correcto
+      alert("El dni es correcto");
+      document.write("El numero introducido " + dniNumero + " y la letra instroducida es " + dniLetra);
+    }
+    else {  // si cumple esta condicion no será correcto
+      alert("El dni no es correcto");
+
+    }
+
+  </script>
+
+</body>
+
+</html>

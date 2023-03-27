@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+    function validaEmail() {
+        valor = document.getElementById("email").value;
+        if (/^(.+\@.+\..+)$/.test(valor))  {
+            alert("no valido email");
+        return false;
+        }
+        alert(" valido email");
+        return true;
+        }
+       
+        function validaDNI() {
+ valor = document.getElementById("dni").value;
+ var letras = ["T"
+,
+"R"
+,
+"W"
+,
+"A"
+,
+"G"
+,
+"M"
+,
+"Y"
+,
+"F"
+,
+"P"
+,
+"D"
+,
+ "X"
+,
+"B"
+,
+"N"
+,
+"J"
+,
+"Z"
+,
+"S"
+,
+"Q"
+,
+"V"
+,"H","L","C","K","E","T"];
+
+ if ( !(/^\d{8}[A-Z]$/.test(valor)) ) { 
+    alert("dni no valido");
+    return false; }
+
+ if (valor.charAt(8) != letras[(valor.substring(0, 8))%23])
+ { alert("dni no valido");
+    return false; }
+    alert("dni valido");
+ return true;
+}
+
+
+
+function validaTelefono() {
+ valor = document.getElementById("telefono").value;
+ if ( !(/^\d{9}$/.test(valor)) ) {
+    alert("no valido telefono");
+ return false;
+ }
+ alert(" valido telefono");
+ return true;
+}
+
+
+    </script>
+    </head>
+    <body>
+
+
+
+
+        <form name="formulario" method="get">
+            Email:<input type="text" name="email" id="email" onchange="return validaEmail()"><br>
+            DNI:<input type="text" name="dni" id="dni" onchange="return validaDNI()"><br>
+            Telefono:<input type="text" name="telefono" id="telefono" onchange="return validaTelefono()"><br>
+            
+        </form>
+    </body>
+</html>

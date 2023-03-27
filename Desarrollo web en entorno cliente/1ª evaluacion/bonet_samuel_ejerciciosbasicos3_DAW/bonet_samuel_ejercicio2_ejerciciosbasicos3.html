@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="author" content="Samuel Bonet">
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        /*2.	Crea una página Web que muestre la fecha y hora actual con elsiguiente formato:
+                Hoy es lunes, 28 de Noviembre de 2022 y son las 14:32 horas
+                Puedes ayudarte del objeto Date.
+
+        */
+    
+            var fecha = new Date();//nueva fecha
+
+            var diaNombre =fecha.toLocaleDateString("es-ES" ,{weekday:"long"});//uso la variable para obtener el nombre del dia (en español y el nombre completo (long))
+            var dia = fecha.getDate();//obtengo la fecha
+            var mesNombre =fecha.toLocaleDateString("es-ES",{month:"long"});//uso la variable para obtener el nombre del mes (en español y el nombre completo (long))
+            var ano=fecha.getFullYear();//variable con la que obtengo el año
+            var hora =fecha.toLocaleTimeString("es-ES", { hour:"numeric", minute: 'numeric' });//uso esta variable para obtener la hora y uso el numeric para evitar que no ponga el 0 (ej:15:01)
+
+
+            document.write("Hoy es " + diaNombre + ", " + dia + " de " + mesNombre+ " de " +ano+" y son las " + hora + " horas");//mustro por pantalla el resultado
+ 
+      
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Bonet">
+    <title>Ejercicio 1 3.2</title>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*1.	Crea una página Web que valide la letra del Documento Nacional de Identidadintroducido por un usuario mediante una función.
+        El cálculo de la letra del DNI es un proceso matemático sencillo que se basa en obtener el resto de la división entera del número de DNI y el número 23. A partir del resto de la división, se obtiene la letra seleccionándola dentro de un array de letras.
+        Elarray de letras es: 'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E','T'.
+        Por tanto, si el resto de la división es 0, la letra del DNI es la T o si el resto es 3, la letra es la A.
+        El DNI debe ser introducido desde una ventana emergente, que deberá volver a aparecer mientras no sea correcto. Cuando sea correcto, se indicará en un mensaje también en una ventana emergente.
+        Debesusar la clase Array.*/
+        
+        var dni = prompt("Introduce tu DNI");   //escribir  el dni
+        var letra = dni.charAt(dni.length-1);   //selecciona la ultima letra 
+        var numero = dni.substring(0, dni.length-1);    //selecciona el numero del dni
+        var letras = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E','T']; //array
+        var letraCorrecta = letras[numero%23]; //calcula la letra correcta
+        if (letraCorrecta == letra.toUpperCase()) { //comprueba si la letra es correcta
+            alert("El DNI es correcto"); //si es correcto
+        } else {
+            alert("El DNI es incorrecto");  //si es incorrecto 
+        }
+    
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="author" content="Samuel Bonet">
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        /*1.	Haz una página que genere el juego del PUM hasta 100. Es decir, que escriba los números separados por coma y cada vez que encuentre un número terminado en 7 o múltiplo de 7 escriba PUM y cambie de línea:
+                1, 2, 3, 4, 5, 6, PUM
+                8, 9, 10, 11, 12, 13, PUM
+                15, 16, PUM
+                18, 19, 20, PUM
+                22, 23, 24, 25,26, PUM
+        */
+        var numero;
+        for (numero = 1; numero <= 100; numero++) { //uso un for para reccorer los numeros del 1 hasta el 100
+            if (numero % 7 == 0 || numero % 10 == 7) { //en caso de que cumpla los requisitos del enunciado mostrara PUM
+                document.write(" PUM <br>");
+            } else {
+                document.write(numero + ", ");//y sino seguira poniendo el numero
+            }
+        }
+    </script>
+
+</body>
+
+</html>

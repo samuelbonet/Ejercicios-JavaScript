@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+   <meta name="author" content="Samuel Bonet">
+    <title>Ejercicio 3 3.1</title>
+  
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*3.	Calcula el número factorial de un número introducido por pantallamediante una función.
+        */
+        function calcularFactorial(){
+        var numero = parseFloat(prompt("Introduce un numero"));//uso de parsefloat al pedir el numero
+        var total = 1;//inicializo la variable
+
+        for (var i = 1; i <= numero; i++) {//uso de for para recorrer la variable i y despues multiplicarlo por el total
+            total = total * i;
+        }
+        alert("El factorial del  numero introducido es " + total);//muestro el mensaje por pantalla
+    }
+    
+        calcularFactorial();//llamo a la función    
+    </script>
+</body>
+
+</html>

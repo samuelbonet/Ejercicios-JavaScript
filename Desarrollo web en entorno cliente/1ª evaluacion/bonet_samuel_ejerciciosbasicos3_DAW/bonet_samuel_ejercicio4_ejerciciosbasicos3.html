@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="author" content="Samuel Bonet">
+    <title>Varios objetos predefinidos de JS</title> <!--poner el titulo-->
+</head>
+
+<body>
+
+    <script type="text/javascript">
+        /*4.	Crea una página Web que muestre el valor en píxeles de la diagonal de la pantalla del usuario (raíz cuadrada de la suma del cuadrado de la anchura más el cuadrado de la altura). Además, muestre el texto en color blanco, el fondo en gris y el título de la página sea “Varios objetos predefinidos de JS”.
+                Puedes ayudarte de los objetos Screen, Math y Document.
+
+        */
+
+
+        var ancho = screen.availWidth //ancho
+        var altura = screen.availHeight;//altura
+        var diagonal = Math.sqrt(ancho * ancho + altura * altura); //uso math para calcular la diagonal
+        
+        document.write("La diagonal de la pantalla es :" + diagonal)
+        document.fgColor = "white"; //fuente de color girs
+        document.bgColor = "grey"; //fondo gris
+
+
+     
+
+    </script>
+
+</body>
+
+</html>

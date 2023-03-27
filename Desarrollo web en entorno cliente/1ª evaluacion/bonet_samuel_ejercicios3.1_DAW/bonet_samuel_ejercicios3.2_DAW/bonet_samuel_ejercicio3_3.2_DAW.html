@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Samuel Bonet">
+    <title>Ejercicio 3</title>
+ 
+    <script type="text/javascript">   
+    /*3. Crea un script que defina un objeto llamado “ProductosAlimenticios”. Este objeto debe presentar laspropiedades
+    código, nombre y precio, además del método “imprimeDatos”, el cual escribe por pantalla losvalores de sus
+    propiedades. Posteriormente, crea tres instancias de este objeto y guárdalas en un array. Con laayuda del bucle for,
+    utiliza el método “imprimeDatos” para mostrar por pantalla los valores de los tres objetosinstanciados.*/
+
+    
+        ProductosAlimenticios = function (codigo, nombre, precio) {//Definición del objeto ProductosAlimenticios (propiedades y  su método "imprimeDatos" )
+            this.codigo = codigo; //Propiedades del objeto
+            this.nombre = nombre; //Propiedades del objeto
+            this.precio = precio; //Propiedades del objeto
+
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var imprimeDatos = new Array(3); //Creación del array de 3 elementos (3 instancias del objeto ProductosAlimenticios)  
+        imprimeDatos[0] = new ProductosAlimenticios(123, "Pan", 1.50); //Primera instancia del objeto ProductosAlimenticios
+        imprimeDatos[1] = new ProductosAlimenticios(245, "Huevos", 2.50); //Segunda instancia del objeto ProductosAlimenticios  
+        imprimeDatos[2] = new ProductosAlimenticios(334, "Leche", 1.20); //Tercera instancia del objeto ProductosAlimenticios
+
+        for (i = 0; i < imprimeDatos.length; i++) { //Bucle for para mostrar los datos de los objetos instanciados del array 
+            document.write("<b>Codigo del producto</b>: " + imprimeDatos[i].codigo + " | <b>Nombre del producto</b>: " + imprimeDatos[i].nombre + " | <b>Precio del producto</b>: " + imprimeDatos[i].precio + "euros" + "<br>"); //Muestro por pantalla los datos de los objetos instanciados en el array 
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

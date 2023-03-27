@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body>
+    <script>
+        /*Crea un array con los elementos '4',
+        '21', '1' , '30' y '100000 ' en un script que los
+        ordene de menor a mayor.*/
+
+        
+            numeros = [4, 21, 1, 30, 100000] // Array de numeros
+            numerosyaordenados = [] //Array vacio para los numeros ordenados
+            for (i = 0; i < numeros.length; i++) { //Bucle para recorrer el array de numeros
+                if (numerosyaordenados.length == 0) { //Si el array de ordenados esta vacio
+                    numerosyaordenados.push(numeros[i])  //Añade el numero
+                } else {  //Si no esta vacio
+                    for (j = 0; j < numerosyaordenados.length; j++) {  //Hasta que el numero j sea igual que el numero de elementos del array ordenados (faltan numeros)
+                        if (elementos[i] < numerosyaordenados[j]) { // Si el elemento es menor que los ordenados
+                            elementosOrdenados.splice(j, 0, elementos[i])  // Lo ubicara en la posicion correspondiente del array
+                            break // y saldra del bucle
+                        } else if (j == numerosyaordenados.length - 1) { //Si no hay ningun numero menor que este
+                            numerosyaordenados.push(elementos[i]) // Lo añadirá al final del array ya que es el mayor
+                            break //
+                        }
+                    }
+                }
+            }
+            document.write(numerosyaordenados); 
+        
+    </script>
+</body>
+
+</html>
